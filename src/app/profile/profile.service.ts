@@ -10,7 +10,7 @@ import { AngularFirestore } from "@angular/fire/firestore";
 export class ProfileService {
   //baseUrl = environment.baseUrl;
 
-  constructor(private http: HttpClient, public db: AngularFirestore) {}
+  constructor(private http: HttpClient) {}
 
   skillsData: any = [
     {
@@ -102,10 +102,6 @@ export class ProfileService {
   // contactus(data: any): Observable<any> {
   //   return this.http.post(this.baseUrl + 'contact', data);
   // }
-
-  getALLKeys() {
-    return this.db.collection("/enums").valueChanges();
-  }
 
   skills(): Observable<any> {
     // return this.http.get(this.baseUrl + 'skills');

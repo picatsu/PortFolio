@@ -9,9 +9,5 @@ import { ProfileService } from "../profile.service";
 export class HeaderComponent implements OnInit {
   constructor(private _service: ProfileService) {}
 
-  ngOnInit() {
-    this._service.getALLKeys().subscribe((res) => {
-      console.log("reponse : ", res);
-    });
-  }
+  ngOnInit() {}
 }

@@ -1,8 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
-import { environment } from "../environments/environment";
 import { AppComponent } from "./app.component";
 import { RouterModule, Routes, ExtraOptions } from "@angular/router";
 import { ProfileComponent } from "./profile/profile.component";
@@ -18,6 +16,7 @@ const routes: Routes = [
 
 const config: ExtraOptions = {
   useHash: true,
+  relativeLinkResolution: "legacy",
 };
 
 @NgModule({
@@ -27,7 +26,7 @@ const config: ExtraOptions = {
     RouterModule.forRoot(routes, config),
     ProfileModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
+
     AngularFirestoreModule,
   ],
   providers: [],
