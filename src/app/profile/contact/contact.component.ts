@@ -1,22 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { ProfileService } from '../profile.service';
-import { SnotifyService } from 'ng-snotify';
-import { environment } from '../../../environments/environment';
+import { Component, OnInit } from "@angular/core";
+
+import { environment } from "../../../environments/environment";
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: "app-contact",
+  templateUrl: "./contact.component.html",
+  styleUrls: ["./contact.component.scss"],
 })
 export class ContactComponent implements OnInit {
- 
   model: any = {};
 
-  constructor(){}
+  constructor() {}
 
-  ngOnInit() {
-     }
-
+  ngOnInit() {}
 
   // snotifyConfig = environment.snotifyConfig;
   // model: any = {};
@@ -40,5 +36,4 @@ export class ContactComponent implements OnInit {
   //     this.snotify.error('Something went wrong. Try again later.', 'Error', this.snotifyConfig);
   //   });
   // }
-
 }
