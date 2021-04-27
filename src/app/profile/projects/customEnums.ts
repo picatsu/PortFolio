@@ -5,7 +5,7 @@ export enum AppNames {
   FINANCE_CUSTOM = "Finance-custom",
   FINANCE_EARNINGS = "Finance-earnings",
   FINANCE_MONITORING = "Finance-monitoring",
-  FINANCE_WEB = "Finance-Client",
+  FINANCE_WEB = "Finance-client",
 
   CEVT_API = "Dashboard-univ-api",
   CEVT_WEB = "Dashboard-univ-web",
@@ -20,6 +20,6 @@ export enum LOGO {
 }
 
 export enum AppType {
-  API,
-  WEB,
+  API = "API",
+  WEB = "WEBAPP",
 }
