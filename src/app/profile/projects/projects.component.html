@@ -6,7 +6,7 @@
       #dt1
       [value]="listData$"
       dataKey="type"
-      [rows]="10"
+      [rows]="listData$.length"
       [showCurrentPageReport]="true"
       [rowsPerPageOptions]="[10, 25]"
       styleClass="p-datatable-customers p-datatable-gridlines"
@@ -36,6 +36,7 @@
       </ng-template>
       <ng-template pTemplate="header">
         <tr>
+        
           <th>
             <div class="p-d-flex p-jc-between p-ai-center">Type / Description</div>
           </th>
@@ -59,6 +60,7 @@
         </tr>
 
         <tr>
+       
           <th>
            <p style="font-size: 12px;"> hoover for description</p>     
           </th>
@@ -86,7 +88,9 @@
       </ng-template>
       <ng-template pTemplate="body" let-customer>
         <tr>
+         
           <td >
+            <img  class="img-responsive" style="width: 4vw; height: 8vh" src="{{customer.logo}}">&nbsp;&nbsp;
            <span pTooltip="{{ customer.description }}" [class]="'customer-badge status-' + getTypeBadge(customer.type) " > {{ customer.type }}</span> 
           </td>
           <td>

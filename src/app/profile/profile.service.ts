@@ -11,10 +11,15 @@ export class ProfileService {
   constructor(private http: HttpClient) {}
 
   getIpData() {
-    return this.http.get("https://api.db-ip.com/v2/free/self");
+    return this.http.get(
+      "https://api.bigdatacloud.net/data/ip-geolocation?key=d9e53816d07345139c58d0ea733e3870"
+    );
   }
 
   postMetrics(data: any) {
-    return this.http.post("URL", data);
+    return this.http.post(
+      "http://146.59.195.214:9090/metrics/api/v1/save",
+      data
+    );
   }
 }

@@ -12,11 +12,15 @@ export enum AppNames {
 
   DYSTOLAB_API = "Health-api",
   DYSTOLAB_WEB = "Health-web",
+
+  PORTFOLIO_WEB = "portfolio-web",
 }
 
 export enum LOGO {
-  API = "",
-  WEB = "",
+  SPRING = "/assets/images/spring.png",
+  NESTJS = "/assets/images/nest.png",
+  ANGULAR = "/assets/images/angular.png",
+  REACT = "/assets/images/react.png",
 }
 
 export enum AppType {

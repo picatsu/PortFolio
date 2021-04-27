@@ -10,6 +10,7 @@ import { Projects } from "./customInterfaces";
 export class ProjectsComponent implements OnInit {
   listData$: Projects[] = [];
   stacksList: string[] = [];
+
   constructor() {}
 
   ngOnInit() {
@@ -23,7 +24,7 @@ export class ProjectsComponent implements OnInit {
         lienDemo:
           "http://146.59.195.214:8006/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config",
         lienGit: "https://gitlab.com/cevt-dashboard/cevt-serverside",
-        logo: LOGO.API,
+        logo: LOGO.SPRING,
         stack: ["Spring boot", "Mongodb", "Docker"],
       },
       {
@@ -33,7 +34,7 @@ export class ProjectsComponent implements OnInit {
           "Interface/Couche par dessus le SI (deprecated) de la faculté de Saclay, pour fournir des données ( ex:  EDT ) en REST",
         lienDemo: "http://146.59.195.214:3000/#/login",
         lienGit: "https://gitlab.com/cevt-dashboard/cevt-clientside",
-        logo: LOGO.WEB,
+        logo: LOGO.REACT,
         stack: ["ReactJS"],
       },
       // FINANCE
@@ -45,7 +46,7 @@ export class ProjectsComponent implements OnInit {
         lienDemo:
           "http://146.59.195.214:8003/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config",
         lienGit: "https://github.com/picatsu-finance/stocks",
-        logo: LOGO.API,
+        logo: LOGO.SPRING,
         stack: ["Spring boot", "Mongodb", "Docker"],
       },
       {
@@ -55,7 +56,7 @@ export class ProjectsComponent implements OnInit {
         lienDemo:
           "http://146.59.195.214:8001/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config",
         lienGit: "https://github.com/picatsu-finance/crypto",
-        logo: LOGO.API,
+        logo: LOGO.SPRING,
         stack: ["Spring boot", "Mongodb", "Docker"],
       },
       {
@@ -65,7 +66,7 @@ export class ProjectsComponent implements OnInit {
         lienDemo:
           "http://146.59.195.214:8002/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config",
         lienGit: "https://github.com/picatsu-finance/forex",
-        logo: LOGO.API,
+        logo: LOGO.SPRING,
         stack: ["Spring boot", "Mongodb", "Docker"],
       },
       {
@@ -75,7 +76,7 @@ export class ProjectsComponent implements OnInit {
           "Micro Service, en rapport avec les produits custom : indices, options etc",
         lienDemo: "http://146.59.195.214:8004/swagger-ui.html",
         lienGit: "https://github.com/picatsu-finance/custom",
-        logo: LOGO.API,
+        logo: LOGO.SPRING,
         stack: ["Spring boot", "Mongodb", "Docker"],
       },
       {
@@ -84,7 +85,7 @@ export class ProjectsComponent implements OnInit {
         description: "Micro Service, expose les dividendes et rentabilitées",
         lienDemo: "http://146.59.195.214:4000/api/",
         lienGit: "https://github.com/picatsu-finance/earnings-nestJs",
-        logo: LOGO.API,
+        logo: LOGO.NESTJS,
         stack: ["NestJs", "Docker"],
       },
       {
@@ -93,21 +94,20 @@ export class ProjectsComponent implements OnInit {
         description: "Dashboard monitoring des microservices finances",
         lienDemo: "http://146.59.195.214:9090/wallboard",
         lienGit: "https://github.com/picatsu-finance/gateway",
-        logo: LOGO.API,
+        logo: LOGO.SPRING,
         stack: ["Spring boot", "Spring cloud", "Mongodb", "Docker"],
       },
       {
-        type: AppType.API,
+        type: AppType.WEB,
         title: AppNames.FINANCE_WEB,
         description:
           "Web App du projet finance, expose plusieurs data ainsi que des alertes",
         lienDemo: "http://146.59.195.214:6541/pages/custom-basket/custom-menu",
         lienGit: "https://github.com/picatsu-finance/client-angular",
-        logo: LOGO.API,
+        logo: LOGO.ANGULAR,
         stack: ["Angular", "NebularUi", "Docker"],
       },
       // DYSTOLAB
-
       {
         type: AppType.WEB,
         title: AppNames.DYSTOLAB_WEB,
@@ -115,8 +115,19 @@ export class ProjectsComponent implements OnInit {
           "Application permettant aux neurologues et aux kinésithérapeutes de suivre l'évolution de la dystonie cervicale de leurs patients",
         lienDemo: "https://dystolab-client.herokuapp.com/#/login",
         lienGit: "Private",
-        logo: LOGO.API,
+        logo: LOGO.ANGULAR,
         stack: ["Angular", "Heroku"],
+      },
+
+      // Portfolio
+      {
+        type: AppType.WEB,
+        title: AppNames.PORTFOLIO_WEB,
+        description: "Portfolio ",
+        lienDemo: "http://146.59.195.214:7004/",
+        lienGit: "https://github.com/picatsu/PortFolio",
+        logo: LOGO.ANGULAR,
+        stack: ["Angular"],
       },
     ];
     const mySet = new Set<string>();

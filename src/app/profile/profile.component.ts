@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { environment } from "src/environments/environment";
 import { NgxSpinnerService } from "../../../node_modules/ngx-spinner";
 import { ProfileService } from "./profile.service";
 
@@ -18,8 +19,9 @@ export class ProfileComponent implements OnInit {
     setTimeout(() => {
       this.spinner.hide();
     }, 2000);
-
-    this.postMetrics();
+    if (environment.production) {
+      this.postMetrics();
+    }
   }
 
   postMetrics() {
